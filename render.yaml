@@ -15,3 +15,7 @@ services:
         value: your_secure_password
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "true"
+disk:
+  name: n8n-data
+  mountPath: /home/node/.n8n
+  sizeGB: 1
