@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    region: frankfurt
+    plan: starter # or standard for more power
+    branch: main
+    envVars:
+      - key: N8N_HOST
+        value: n8n.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_URL
+        value: https://n8n.onrender.com
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yoursecurepassword
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-xxxxx.frankfurt-postgres.render.com
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: owlai_db
+      - key: DB_POSTGRESDB_USER
+        value: owluser
+      - key: DB_POSTGRESDB_PASSWORD
+        value: yourpassword
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "false"
