@@ -1,4 +1,5 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:latest
 
-# Optional: Use a custom timezone
+# Set timezone if needed
 ENV TZ=Europe/Zurich
+
