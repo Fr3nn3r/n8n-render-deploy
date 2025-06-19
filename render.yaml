@@ -6,6 +6,8 @@ services:
     plan: starter
     branch: main
     autoDeploy: true
+    image:
+      url: docker.io/n8nio/n8n:1.98.2
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
